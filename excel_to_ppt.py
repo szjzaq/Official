@@ -34,16 +34,16 @@ for i in range(0, 4):
         if j == 0:
             p.text = str(data)
         elif j == 1:
-            p.text = '问题分类: ' + str(data)
+            p.text = 'project: ' + str(data)
         elif j == 2:
-            p.text = '一级检查项: ' + str(data)
+            p.text = 'project: ' + str(data)
         else:
-            p.text = '二级检查项: ' + str(data)
+            p.text = 'project: ' + str(data)
 
         p.font.size = Pt(24)
         print('i', i, 'j', j)
 
-        # 预留for
+        # reserved for loop
     # for k in range(4,5):
     left = Inches(y)
     top = Inches(6.2)
@@ -53,12 +53,10 @@ for i in range(0, 4):
     txBox = slide.shapes.add_textbox(left, top, width, height)
     tf = txBox.text_frame
     data = files.iloc[i, 4]
+    # data = files.iloc[i, k]
     p = tf.add_paragraph()
     p.text = str(data)
     p.font.size = Pt(24)
     p.alignment = PP_ALIGN.CENTER
     print('i', i, 'k', 4)
     prs.save('ba.pptx')
-
-
-
