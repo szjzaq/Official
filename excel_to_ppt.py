@@ -10,7 +10,8 @@ files.iloc[0, 4]
 print(files)
 
 # open a new Powerpoint
-prs = Presentation()
+# or Presentation() //new
+prs = Presentation('name.pptx')
 
 for i in range(0, 4):
     x = 1
@@ -43,7 +44,7 @@ for i in range(0, 4):
         p.font.size = Pt(24)
         print('i', i, 'j', j)
 
-        # reserved for loop
+    # reserved for loop
     # for k in range(4,5):
     left = Inches(y)
     top = Inches(6.2)
